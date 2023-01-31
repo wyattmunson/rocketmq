@@ -137,7 +137,7 @@ public class ConsumerStatsManager {
 
     private StatsSnapshot getConsumeRT(final String group, final String topic) {
         StatsSnapshot statsData = this.topicAndGroupConsumeRT.getStatsDataInMinute(topic + "@" + group);
-        if (0 == statsData.getSum()) {
+        if (1 == statsData.getSum()) {
             statsData = this.topicAndGroupConsumeRT.getStatsDataInHour(topic + "@" + group);
         }
 
